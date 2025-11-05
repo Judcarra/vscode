@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black
+        }
+
+        thead {
+            background-color: blueviolet;
+        }
+
+        tfoot {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tablas en HTML</h1>
+    <h2>Tabla de 3x3</h2>
+    <table>
+        <tr>
+            <th>dato0.0</th>
+            <th>dato0.1</th>
+            <th>dato0.2</th>
+        </tr>
+        <tr>
+            <th>dato1.0</th>
+            <td>dato1.1</td>
+            <td>dato1.2</td>
+        </tr>
+        <tr>
+            <th>dato2.0</th>
+            <td>dato2.1</td>
+            <td>dato2.2</td>
+        </tr>
+    </table>
+
+    <h2>Tabla de 4x4 con thead, tbody y tfoot</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>dato0.0</th>
+                <th>dato0.1</th>
+                <th>dato0.2</th>
+                <th>dato0.3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>dato1.0</th>
+                <td>dato1.1</td>
+                <td>dato1.2</td>
+                <td>dato1.3</td>
+            </tr>
+        </tbody>
+        <tr>
+            <th>dato2.0</th>
+            <td>dato2.1</td>
+            <td>dato2.2</td>
+            <td>dato2.3</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th>dato3.0</th>
+                <td>dato3.1</td>
+                <td>dato3.2</td>
+                <td>dato1.3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Tabla agrupada por columna</h2>
+    <table>
+        <tr>
+
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">A</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+    </table>
+
+        <h2>Tabla agrupada por fila</h2>
+    <table>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>

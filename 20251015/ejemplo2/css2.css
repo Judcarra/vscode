@@ -1,0 +1,20 @@
+h1, h2, p, div{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.volver_rojo:hover {
+    background-color: red;
+    color:white
+}
+.volver_rojo:active {
+    border: 3px solid blue;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link{
+    color: orangered;
+}
+a:visited{ color: blue;}
+a:hover{font-size: 1.2rem;cursor: help;}
+a:active{background-color: yellow;}

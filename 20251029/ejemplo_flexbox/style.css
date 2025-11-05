@@ -1,0 +1,10 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(243, 131, 243);
+    flex-wrap: wrap;
+    gap: 10px;
+}

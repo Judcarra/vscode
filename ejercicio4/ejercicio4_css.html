@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CorpSite — Ejercicio CSS 4</title>
+  <link rel="stylesheet" href="ejercicio4.css">
+  <style>
+    /* INSTRUCCIONES DE ESTILO
+       1) Fuente base: aplica a toda la página la familia "Arial, Helvetica, sans-serif" (selector por etiqueta - body).
+       2) H1: usa un tamaño de fuente de 2rem y añade un text-shadow de 2px 2px 4px gris (#999).
+       3) Enlaces: 
+          - Estado normal (link): color azul (#0055cc), sin subrayado.
+          - Visitado: color morado (#660099).
+          - Hover: color rojo (#cc0000), con subrayado.
+          - Active: fondo amarillo (#ffff99).
+       4) Clase .destacado: texto en negrita y color verde (#008000).
+       5) Id #aviso: fondo amarillo claro (#fff8b3), borde de 1px sólido gris (#ccc), padding de 10px.
+       6) Combina selectores:
+          - #menu ul li a: texto en mayúsculas, color negro.
+          - #contenido .lista li: marcador de lista cuadrado (list-style-type: square).
+       7) Selector de atributo: los enlaces con target="_blank" deben mostrarse en  negrita. 
+            (extra - tendrás que buscarlo)
+       8) Tabla (.tabla-precios):
+          - Bordes de 1px sólidos grises (#ccc).
+          - Fondo de cabecera (#e0e0e0).
+          - (extra - tendrás que buscarlo) Filas pares con fondo gris muy claro (#f9f9f9).
+       9) Formulario (#contacto-form):
+          - Inputs y textarea con borde de 1px sólido gris (#aaa) y padding de 5px.
+          - Cuando estén en foco (:focus), borde azul (#3399ff).
+       10) Botón con clase .btn-enviar:
+          - Fondo azul (#007bff), texto blanco, padding de 8px 16px, borde redondeado (4px).
+            (extra - borde redondeado)
+          - En hover: fondo verde (#28a745).
+    */
+  </style>
+</head>
+<body>
+
+  <div id="aviso">
+    <p><strong>Atención:</strong> Esta es una página de prueba para practicar <span class="destacado">CSS</span>.</p>
+  </div>
+
+  <div id="cabecera">
+    <h1>Mi Empresa</h1>
+    <p class="nota-pequena">Ejemplo de página corporativa básica.</p>
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#contacto" target="_blank">Contacto</a></li>
+    </ul>
+  </div>
+
+  <div id="contenido">
+    <div id="nosotros">
+      <h2>Sobre nosotros</h2>
+      <p>Somos una compañía dedicada a ofrecer <span class="destacado">valor</span> a nuestros clientes.</p>
+    </div>
+
+    <div id="servicios">
+      <h2>Servicios</h2>
+      <ul class="lista">
+        <li>Consultoría</li>
+        <li>Formación</li>
+        <li>Soporte</li>
+      </ul>
+    </div>
+
+    <div id="precios">
+      <h2>Tabla de precios</h2>
+      <table class="tabla-precios">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Detalles</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Básico</td>
+            <td>Soporte por email</td>
+            <td>15 €/mes</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>Soporte telefónico</td>
+            <td>40 €/mes</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>Cuenta dedicada</td>
+            <td>80 €/mes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="contacto">
+      <h2>Formulario de contacto</h2>
+      <form id="contacto-form">
+        <p>
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" />
+        </p>
+        <p>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" />
+        </p>
+        <p>
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea>
+        </p>
+        <p>
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <div id="pie">
+    <p>&copy; 2025 Mi Empresa — <a href="#nosotros">Nosotros</a> | <a href="#servicios">Servicios</a></p>
+  </div>
+
+</body>
+</html>

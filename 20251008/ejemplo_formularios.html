@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo formularios</title>
+</head>
+<body>
+    <h1>Ejemplo de formulario</h1>
+    <p>Lorem <b>ipsum</b> dolor <strong>sit</strong> amet consectetur, adipisicing elit. Iste quis quidem ducimus sed eligendi, voluptate debitis. Culpa officia aspernatur eius cupiditate, quis deserunt, dicta expedita facilis quam voluptatibus, accusantium doloribus!</p>
+
+    <form action="procesa.php" method="post">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email"/>
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password"/>
+        </p>
+        <input type="submit" value="Enviar"/>
+    </form>
+    
+    <h4>Intereses</h4>
+    <input type="radio" name="intereses" value="internacional" id="internacional"/>
+    <label for="internacional">Internacional</label>
+    <br/>
+    <input type="checkbox" name="deportes" value=deportes id=deportes/>
+    <label for="deportes">Deportes</label>
+    <br/>
+    <input type="checkbox" name="cultura" value=cultura id=cultura/>
+    <label for="cultura">Cultura</label>
+    <br/>
+    <input type="submit" value="Enviar"/>
+    <h4>Equipos</h4>
+    <input type="radio" name="equipos" value="Barcelona" id="Barcelona"/>
+    <label for="Barcelona">Barcelona</label>
+    <br/>
+    <input type="radio" name="Equipos" value=Madrid id=Madrid/>
+    <label for="Madrid">Madrid</label>
+    <br/>
+    <input type="radio" name="Equipos" value=Español id=Español/>
+    <label for="Español">Español</label>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</body>
+</html>
