@@ -17,9 +17,11 @@
 </head>
 
 <body>
-    <header>
-        <h1>Festival de Cine Sabadell</h1>
-        <h3>Propósito</h3>
+    <header style="display:flex;align-items: center;">
+        <h1 id="t1">Festival de Cine Sabadell</h1>
+        
+        <h3 id="t2">Propósito</h3>
+    
         <p>
             Este verano, de los días <strong>23 al 26 de julio</strong>, se celebrará en Sabadell, en el <strong>Parc
                 Catalunya</strong>, un <em>festival de cine al aire libre</em><br>
@@ -32,69 +34,54 @@
     </header>
     <main>
         <aside>
-            <h3>Películas</h3>
-            <h4>Haga "click" en el título de la película que esté interesado en ver</h4>
-            <table>
-                <tr>
-                    <th>Día</th>
-                    <th>Hora</th>
-                    <th>Sala</th>
-                    <th>Película</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Jueves 23/07</td>
-                    <td>20:00</td>
-                    <td>Sala B</td>
-                    <td><a href="#Sonrisas_y_lagrimas">Sonrsisas y lágrimas</a></td>
-                </tr>
-                <tr>
-                    <td>23:00</td>
-                    <td>Sala A</td>
-                    <td><a href="#El_Exorcista">El Exorcista</a></td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Viernes 24/07</td>
-                    <td>20:00</td>
-                    <td>Sala A</td>
-                    <td><a href="#El_Padrino">El Padrino</a></td>
-                </tr>
-                <tr>
-                    <td>23:30</td>
-                    <td>Sala B</td>
-                    <td><a href="#Tiburon">Tiburón</a></td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Sábado 25/07</td>
-                    <td>16:40</td>
-                    <td>Sala A</td>
-                    <td><a href="#Lo_que_el_viento_se_llevo">Lo que el viento se llevó</td>
-                </tr>
-                <td>19:30</td>
-                <td>Sala A</td>
-                <td><a href="#Sonrisas_y_lagrimas">Sonrisas y lágrimas</a></tr>
-                    <tr>
-                        <td>23:30</td>
-                        <td>Sala B</td>
-                        <td><a href="#El Exorcista">El Exorcista</a></td>
-                    </tr>::
-                    <tr>
-                        <td rowspan="3">Domingo 26/07</td>
-                        <td>17:00</td>
-                        <td>Sala A</td>
-                        <td><a href="#Lo_que_el_viento_se_llevo">Lo que el viento se llevó</a></td>
-                    </tr>
-                    <tr>
-                        <td>19:30</td>
-                        <td>Sala B</td>
-                        <td><a href="#El_padrino">El
-                                Padrino</a></td>
-                    </tr>
-                    <tr>
-                        <td>21:30</td>
-                        <td>Sala A</td>
-                        <td><a href="#Tiburon">Tiburon</a></td>
-                    </tr>
-            </table>
+            <h2>Formulario de inscripción al festival</h2>
+            <form action="procesa.php" method="get">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="inputext"/>
+                <br>
+                <br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required class="inputext"/>
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" required class="inputext"/>
+                <br>
+                <br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required class="inputext"/>
+                <br>
+                <br>
+                <input type="radio" name="asistencia" value="asistencia" id="asistencia" />
+                <label for="button1">Asistiré a todo el festival</label>
+                <br>
+                <br>
+                <input type="radio" name="asistencia" value="asistencia_parcial" id="asistencia_parcial" />
+                <label for="button2">Asistiré un día</label>
+                <select name="dias" id="dias">
+                    <option value="" disabled selected>--Seleccione un día--</option>
+                    <option value="jueves">Jueves 23/07</option>
+                    <option value="viernes">Viernes 24/07</option>
+                    <option value="sabado">Sábado 25/07</option>
+                    <option value="domingo">Domingo 26/07</option>
+                </select>
+                <br>
+                <br>
+                <input type="radio" name="asistencia" value="asistencia_concreta" id="asistencia_concreta" />
+                <label for="button3">Asistiré solo a una película</label>
+                <select name="pelicula" id="pelicula">
+                    <option value="--Seleccione una película--" disabled selected>--Seleccione una película--</option>
+                    <option value="sonrisas_y_lagrimas">Sonrisas y lágrimas</option>
+                    <option value="el_exorcista">El Exorcista</option>
+                    <option value="el_padrino">El Padrino</option>
+                    <option value="tiburon">Tiburón</option>
+                    <option value="lo_que_el_viento_se_llevo">Lo que el viento se llevó</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Enviar" class="button"/>
+                <input type="reset" value="Reset" class="button"/>
+            </form>
         </aside>
 
         <section>
@@ -140,7 +127,7 @@
                 </a>
                 <br>
                 <h5>Días y horas de proyección de la película</h5>
-                <ul style="list-style-type: circle;">
+                <ul style="list-style-type: circle;" class="horarios">
                     <li>Jueves 23/07 a las 20:00 en la Sala B</li>
                     <li>Sábado 25/07 a las 19:30 en la Sala A</li>
                 </ul>
@@ -169,7 +156,7 @@
                     <img src="img/El_exorcsta.jpg" alt="El_exorcista" height="300">
                 </a>
                 <h5>Días y horas de proyección de la película</h5>
-                <ul style="list-style-type: circle;">
+                <ul style="list-style-type: circle;" class="horarios">
                     <li>Jueves 23/07 a las 23:00 en la Sala A</li>
                     <li>Sábado 25/07 a las 23:30 en la Sala B</li>
                 </ul>
@@ -197,7 +184,7 @@
                     <img src="img/Elpadrino.webp" alt="El_Padrino" height="300">
                 </a>
                 <h5>Días y horas de proyección de la película</h5>
-                <ul style="list-style-type: circle;">
+                <ul style="list-style-type: circle;" class="horarios">
                     <li>Viernes 24/07 a las 20:00 en la Sala A</li>
                     <li>Domingo 26/07 a las 19:30 en la Sala B</li>
                 </ul>
@@ -221,7 +208,7 @@
                     <img src="img/jaws.jpg" alt="Tiburon" height="300">
                 </a>
                 <h5>Días y horas de proyección de la película</h5>
-                <ul style="list-style-type: circle;">
+                <ul style="list-style-type: circle;" class="horarios">
                     <li>Viernes 24/07 a las 23:30 en la Sala B</li>
                     <li>Domingo 26/07 a las 21:30 en la Sala A</li>
                 </ul>
@@ -251,64 +238,78 @@
                     <img src="img/lo_que_el_viento_se_llevo.jpg" alt="Lo_que_el_viento_se_llevo" height="300">
                 </a>
                 <h5>Días y horas de proyección de la película</h5>
-                <ul style="list-style-type: circle;">
+                <ul style="list-style-type: circle;" class="horarios">
                     <li>Sábado 25/07 a las 16:40 en la Sala A</li>
                     <li>Domingo 26/07 a las 17:00 en la sala A</li>
                 </ul>
             </article>
         </section>
 
-        <nav>
-            <hr>
-            <h2>Formulario de inscripción al festival</h2>
-            <form action="procesa.php" method="get">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" required />
-                <br>
-                <br>
-                <label for="apellidos">Apellidos:</label>
-                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required />
-                <br>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email" required />
-                <br>
-                <br>
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required />
-                <br>
-                <br>
-                <input type="radio" name="asistencia" value="asistencia" id="asistencia" />
-                <label for="button1">Asistiré a todo el festival</label>
-                <br>
-                <br>
-                <input type="radio" name="asistencia" value="asistencia_parcial" id="asistencia_parcial" />
-                <label for="button2">Asistiré un día</label>
-                <select name="dias" id="dias">
-                    <option value="" disabled selected>--Seleccione un día--</option>
-                    <option value="jueves">Jueves 23/07</option>
-                    <option value="viernes">Viernes 24/07</option>
-                    <option value="sabado">Sábado 25/07</option>
-                    <option value="domingo">Domingo 26/07</option>
-                </select>
-                <br>
-                <br>
-                <input type="radio" name="asistencia" value="asistencia_concreta" id="asistencia_concreta" />
-                <label for="button3">Asistiré solo a una película</label>
-                <select name="pelicula" id="pelicula">
-                    <option value="--Seleccione una película--" disabled selected>--Seleccione una película--</option>
-                    <option value="sonrisas_y_lagrimas">Sonrisas y lágrimas</option>
-                    <option value="el_exorcista">El Exorcista</option>
-                    <option value="el_padrino">El Padrino</option>
-                    <option value="tiburon">Tiburón</option>
-                    <option value="lo_que_el_viento_se_llevo">Lo que el viento se llevó</option>
-                </select>
-                <br>
-                <br>
-                <input type="submit" value="Enviar" />
-                <input type="reset" value="Reset" />
-            </form>
-        </nav>
+        <aside>
+            <h3>Películas</h3>
+            <h4>Haga "click" en el título de la película que esté interesado en ver</h4>
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th>Sala</th>
+                    <th>Película</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Jueves 23/07</td>
+                    <td>20:00</td>
+                    <td>Sala B</td>
+                    <td><a href="#Sonrisas_y_lagrimas">Sonrsisas y lágrimas</a></td>
+                </tr>
+                <tr>
+                    <td>23:00</td>
+                    <td>Sala A</td>
+                    <td><a href="#El_Exorcista">El Exorcista</a></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Viernes 24/07</td>
+                    <td>20:00</td>
+                    <td>Sala A</td>
+                    <td><a href="#El_Padrino">El Padrino</a></td>
+                </tr>
+                <tr>
+                    <td>23:30</td>
+                    <td>Sala B</td>
+                    <td><a href="#Tiburon">Tiburón</a></td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Sábado 25/07</td>
+                    <td>16:40</td>
+                    <td>Sala A</td>
+                    <td><a href="#Lo_que_el_viento_se_llevo">Lo que el viento se llevó</td>
+                </tr>
+                <td>19:30</td>
+                <td>Sala A</td>
+                <td><a href="#Sonrisas_y_lagrimas">Sonrisas y lágrimas</a></tr>
+                    <tr>
+                        <td>23:30</td>
+                        <td>Sala B</td>
+                        <td><a href="#El Exorcista">El Exorcista</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Domingo 26/07</td>
+                        <td>17:00</td>
+                        <td>Sala A</td>
+                        <td><a href="#Lo_que_el_viento_se_llevo">Lo que el viento se llevó</a></td>
+                    </tr>
+                    <tr>
+                        <td>19:30</td>
+                        <td>Sala B</td>
+                        <td><a href="#El_Padrino">El
+                                Padrino</a></td>
+                    </tr>
+                    <tr>
+                        <td>21:30</td>
+                        <td>Sala A</td>
+                        <td><a href="#Tiburon">Tiburon</a></td>
+                    </tr>
+            </table>
+        </aside>        
     </main>
 </body>
 
