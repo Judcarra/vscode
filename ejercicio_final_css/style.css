@@ -27,7 +27,7 @@
     :root {
         --color-principal: #ff6f61;
         --color-secundario: #ffd700;
-        --color-fondo: #080808;
+        --color-fondo: #3a3636;
         --color-titulo: #f0f0f0;
         --color-texto: #dcdcdc;
         --color-bordes: #333;
@@ -39,15 +39,46 @@
     }
 }
 
+body,
+p,
+li,
+a,
+input,
+select,
+label,
+button {
+    font-family: var(--font-parrafos);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-titulos);
+    color: var(--color-titulo);
+    margin-bottom: var(--espaciado);
+}
+
+h1 {
+    font-size: var(--tamano-h1);
+}
+
+h2 {
+    font-size: var(--tamano-h2);
+}
+
+h3 {
+    font-size: var(--tamano-h3);
+}
+
 body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    font-family: var(--font-parrafos);
     font-size: var(--tamano-texto);
     margin: var(--espaciado);
-    padding: 0;
-    
-
+    padding-right: 5%;
+     padding-left: 5%;
 }
 
 main {
@@ -57,7 +88,15 @@ main {
         "nav section form";
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto 1fr;
-    gap: var(--espaciado)
+    gap: var(--espaciado);
+}
+
+header,
+article,
+img,
+aside form,
+.button {
+    border-radius: var(--radio-bordes);
 }
 
 header {
@@ -67,65 +106,18 @@ header {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    border-radius: var(--radio-bordes);
 }
 
-header #t1{
-    font-size:2.75rem;
+header #t1 {
+    font-size: 2.75rem;
 }
 
-header #t2{
-    font-size:1.9rem;
-}
-header #t3{
-    font-size:1.45rem;
-}
-h1, h2, h3, h4, h5{
-    font-family: var(--font-titulos);
-    color: var(--color-titulo);
-    margin-bottom: var(--espaciado);
+header #t2 {
+    font-size: 1.9rem;
 }
 
-h1{ font-size: var(--tamano-h1); }
-
-h2{ font-size: var(--tamano-h2); }
-
-h3{ font-size: var(--tamano-h3); }
-
-a{
-     font-family: var(--font-parrafos);
-     text-decoration: none;
-     color: var(--color-enlace);
-}
-
-table a:hover{ color: var(--color-hover-enlaces); }
-
-table a:visited{ color: var(--color-visited); }
-
-table a:active{ color: #2b2b2b; }
-
-table{
-    width: 100%;
-    border-collapse: collapse;
-    border-color: var(--color-border-dark);
-    margin-top: var(--espaciado);
-    margin-right: 16px;
-}
-
-table th, td{
-    border: 1px solid var(--color-border);
-    padding: var(--espaciado);
-    text-align: center;
-}
-
-table th{
-    background-color: var(--color-secundario);
-    color: #0A0A0A
-}
-
-table td:hover{
-    background-color: var(--color-hover-tabla);
-    color: #FFFFFF;
+header #t3 {
+    font-size: 1.45rem;
 }
 
 section {
@@ -136,28 +128,69 @@ section {
     justify-content: space-around;
     align-items: flex-start;
 }
-article h3 { 
-    text-shadow: var(--sombra); 
-    justify-content: center;
-}
 
-article{
+article {
     flex: 40%;
     text-align: center;
-    border-radius: var(--radio-bordes);
     padding: var(--espaciado);
 }
 
-img{
-    width: 40%;
-    border-radius: var(--radio-bordes);
+article h3 {
+    text-shadow: var(--sombra);
+    justify-content: center;
 }
 
-a img:hover{
+a {
+    text-decoration: none;
+    color: var(--color-enlace);
+}
+
+table a:hover {
+    color: var(--color-hover-enlaces);
+}
+
+table a:visited {
+    color: var(--color-visited);
+}
+
+table a:active {
+    color: #2b2b2b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: var(--color-border-dark);
+    margin-top: var(--espaciado);
+    margin-right: 16px;
+}
+
+table th,
+td {
+    border: 1px solid var(--color-border);
+    padding: var(--espaciado);
+    text-align: center;
+}
+
+table th {
+    background-color: var(--color-secundario);
+    color: #0A0A0A;
+}
+
+table td:hover {
+    background-color: var(--color-hover-tabla);
+    color: #FFFFFF;
+}
+
+img {
+    width: 40%;
+}
+
+a img:hover {
     border: 3px solid #ff6f61;
 }
 
-a img:active{
+a img:active {
     border: 3px solid var(--color-hover-enlaces);
 }
 
@@ -165,73 +198,67 @@ ul {
     list-style-image: url(img/clock-fill.svg);
     list-style-position: inside;
     padding-left: 20px;
-    list-style-type: style color #FBFCFA;
 }
 
-li{
-    margin-bottom: 8px;
-}
-
-aside form{
+aside form {
     display: flex;
     flex-direction: column;
     gap: var(--espaciado);
     background-color: var(--color-secundario);
     padding: var(--espaciado);
-    border-radius: var(--radio-bordes);
     color: #080707;
 }
 
-input[type="radio"] {
-  accent-color: var(--color-principal);
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
 label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border-color: var(--color-principal);
-  font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-color: var(--color-principal);
+    font-size: 2rem;
 }
 
-select{
+input[type="radio"] {
+    accent-color: var(--color-principal);
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input {
+    border-color: var(--color-principal);
+    height: 40px;
+    width: 530px;
+}
+
+.inputext {
+    font-size: 20px;
+}
+
+.inputext:focus {
+    outline: none;
+    border-width: 6px;
+    border-color: #6DB557;
+}
+
+select {
     border-radius: var(--radio-bordes);
     padding: 8px;
     font-size: 1rem;
     font-family: var(--font-parrafos);
     background-color: #C3FAEB;
     height: 40px;
-    width: 350px;
+    width: 530px;
 }
 
-select:focus{
+select:focus {
     outline: none;
     border-width: 6px;
     border-color: #6DB557;
 }
 
-input {
-    border-color: var(--color-principal);
-    height: 40px;
-    width: 530pt;
-}
-
-.inputext{
-    font-size: 20px;
-}
-
-.inputext:focus{
-    outline: none;
-    border-width: 6px;
-    border-color: #6DB557;
-}
-
-.button{
+.button {
     background-color: var(--color-principal);
     color: #FFFFFF;
     padding: 10px;
@@ -243,11 +270,10 @@ input {
     border-radius: var(--radio-button);
 }
 
-.button:hover{
+.button:hover {
     background-color: var(--color-hover-button);
 }
 
-.button:active{
+.button:active {
     background-color: var(--color-active-button);
 }
-

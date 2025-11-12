@@ -1,164 +1,45 @@
-:root {
-    --color-principal: #a11b1b;
-    --color-secundario: #d4af37;
-    --color-fondo: #fefaf3;
-    --color-titulo: #1a1a1a;
-    --color-texto: #2b2b2b;
-    --color-border: #c0b283;
-    --color-hover-tabla: #ec2894;
-    --color-hover-enlaces: #4eaff4;
-    --color-enlace: #5f15b3;
-    --color-visited: #98e220;
-    --sombra: 0 0 20px rgb(41, 41, 247);
-    --font-titulos: "Merriweather", serif;
-    --font-parrafos: "Open Sans", sans-serif;
-    --tamano-texto: 14px;
-    --tamano-h1: 2.5rem;
-    --tamano-h2: 2rem;
-    --tamano-h3: 1.5rem;
-    --espaciado: 12px;
-    --radio-bordes: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-principal: #ff6f61;
-        --color-secundario: #ffd700;
-        --color-fondo: #1e1e1e;
-        --color-titulo: #f0f0f0;
-        --color-texto: #dcdcdc;
-        --color-bordes: #333;
-        --color-hover: #f372ca;
-        --color-enlace: #b480f0;
-        --color-visited: #b7ef5c;
-        --sombra: 0 0 20px rgb(244, 241, 87);
-    }
-}
-
-body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: var(--font-parrafos);
-    font-size: var(--tamano-texto);
-    margin: var(--espaciado);
-    padding: 0;
-    
-
-}
-
-main {
-
+main{
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav section form";
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    column-gap: 10px;
 
 }
 
-header {
-    background-color: var(--color-principal);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    border-radius: var(--radio-bordes);
-}
-
-header #t1{
-    font-size:2.75rem;
-}
-
-header #t2{
-    font-size:1.9rem;
-}
-header #t3{
-    font-size:1.45rem;
-}
-h1, h2, h3, h4, h5{
-    font-family: var(--font-titulos);
-    color: var(--color-titulo);
-    margin-bottom: var(--espaciado);
-}
-
-h1{ font-size: var(--tamano-h1); }
-
-h2{ font-size: var(--tamano-h2); }
-
-h3{ font-size: var(--tamano-h3); }
-
-a{
-     font-family: var(--font-parrafos);
-     text-decoration: none;
-     color: var(--color-enlace);
-}
-
-table a:hover{ color: var(--color-hover-enlaces); }
-
-table a:visited{ color: var(--color-visited); }
-
-table 
-
-table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: var(--espaciado);
-}
-
-table th, td{
-    border: 1px solid var(--color-border);
-    padding: var(--espaciado);
-    text-align: center;
-}
-
-table th{
-    background-color: var(--color-secundario);
-    color: #0A0A0A
-}
-
-table td:hover{
-    background-color: var(--color-hover-tabla);
-    color: #FFFFFF;
+nav, section, aside{
+    border: 2px solid #0000FF;
 }
 
 nav{
-    border-radius: var(--radio-bordes);
-    display: grid;
-}
-
-section {
-    margin-top: var(--espaciado);
-    gap: var(--espaciado);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-article h3 { 
-    text-shadow: var(--sombra); 
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around; /*Colocar elementos verticalmente*/
+    align-items: center; /* Centrar los elementos horizontalmente*/
 }
 
-article{
-    flex: 40%;
-    text-align: center;
-    border-radius: var(--radio-bordes);
-    padding: var(--espaciado);
+a:hover{
+    font-size: 1.5rem;
+}
+
+aside{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
 }
 
 img{
-    width: 40%;
-    border-radius: var(--radio-bordes);
+    width: 100%;
 }
 
-aside form{
+section{
     display: flex;
-    flex-direction: column;
-    gap: var(--espaciado);
-    background-color: var(--color-secundario);
-    padding: var(--espaciado);
-    border-radius: var(--radio-bordes);
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
+article{
+    width: 40%;
+    border: 1px solid green;
 }
